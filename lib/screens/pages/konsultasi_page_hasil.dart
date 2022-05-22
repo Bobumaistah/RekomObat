@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:money_moora/constants/thame.dart';
+import 'package:money_moora/screens/pages/home_page.dart';
 import 'package:money_moora/screens/pages/konsultasi_inspeksi.dart';
 
-class KonsultasiKeluhan extends StatelessWidget {
-  const KonsultasiKeluhan({Key? key}) : super(key: key);
+class KonsultasiHasil extends StatelessWidget {
+  const KonsultasiHasil({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -99,79 +100,58 @@ class KonsultasiKeluhan extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 77,
+              height: 87,
               width: MediaQuery.of(context).size.width,
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: const Color(0xffEDF1FA),
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: TextFormField(
-                style: blackStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Suhu Tubuh',
-                  hintStyle: blackStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+              child: Text(
+                  'Paracetamol (3 x 1 hari)',
+                  style: blackStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
-              ),
             ),
             const SizedBox(
               height: 15,
             ),
             Container(
-              height: 77,
+              height: 87,
               width: MediaQuery.of(context).size.width,
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: const Color(0xffEDF1FA),
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: TextFormField(
-                style: blackStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Gejala Yang Sering Dialami',
-                  hintStyle: blackStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+              child: Text(
+                  'Aspirin (Diminum saat merasa pusing (maks 1x 1 hari)',
+                  style: blackStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
-              ),
             ),
             const SizedBox(
               height: 15,
             ),
             Container(
-              height: 77,
+              height: 87,
               width: MediaQuery.of(context).size.width,
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: const Color(0xffEDF1FA),
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: TextFormField(
-                style: blackStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Gejala Parah Yang Dialami',
-                  hintStyle: blackStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+              child: Text(
+                  'Panadol (Diminum saat merasa sakit kepala (maks 1x 1 hari) )',
+                  style: blackStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
-              ),
             ),
           ],
         ),
@@ -185,7 +165,7 @@ class KonsultasiKeluhan extends StatelessWidget {
               Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const KonsultasiInspeksi(),
+                      builder: (context) => const HomePage(),
                     ),
               );
             },
@@ -199,7 +179,7 @@ class KonsultasiKeluhan extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  'Selanjutnya',
+                  'Terima Kasih',
                   style: whiteStyle.copyWith(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,

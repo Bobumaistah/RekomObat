@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:money_moora/constants/thame.dart';
-import 'package:money_moora/screens/pages/konsultasi_inspeksi.dart';
+import 'package:money_moora/screens/pages/konsultasi_page_hasil.dart';
 
-class KonsultasiKeluhan extends StatelessWidget {
-  const KonsultasiKeluhan({Key? key}) : super(key: key);
+class KonsultasiInspeksi extends StatelessWidget {
+  const KonsultasiInspeksi({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -78,9 +78,9 @@ class KonsultasiKeluhan extends StatelessWidget {
                   width: 10,
                 ),
                 Text(
-                  'Bagaimana Kondisimu\nHari ini ??',
+                  'Terima Kasih \ntelah menggunakan konsultasi \nterkait penyakitmu..\nSemoga Lekas Sembuh Yaaa... :)',
                   style: blackStyle.copyWith(
-                    fontSize: 18,
+                    fontSize: 14,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
@@ -99,79 +99,26 @@ class KonsultasiKeluhan extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 77,
+              height: 200,
               width: MediaQuery.of(context).size.width,
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: const Color(0xffEDF1FA),
+                color: Color.fromARGB(255, 207, 212, 228),
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: TextFormField(
-                style: blackStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Suhu Tubuh',
-                  hintStyle: blackStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+              child: Text(
+                  'Menurut inspeksi dari dokter kami, \ngejala sakit yang kamu alami yaitu demam ringan, \ndengan minum obat yang kami berikan \nmungkin kamu akan sehat kembali\nJangan lupa minum air putih yang banyak :)',
+                  style: blackStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
-              ),
             ),
             const SizedBox(
               height: 15,
             ),
-            Container(
-              height: 77,
-              width: MediaQuery.of(context).size.width,
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: const Color(0xffEDF1FA),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: TextFormField(
-                style: blackStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Gejala Yang Sering Dialami',
-                  hintStyle: blackStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
             const SizedBox(
               height: 15,
-            ),
-            Container(
-              height: 77,
-              width: MediaQuery.of(context).size.width,
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: const Color(0xffEDF1FA),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: TextFormField(
-                style: blackStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Gejala Parah Yang Dialami',
-                  hintStyle: blackStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
             ),
           ],
         ),
@@ -185,7 +132,7 @@ class KonsultasiKeluhan extends StatelessWidget {
               Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const KonsultasiInspeksi(),
+                      builder: (context) => const KonsultasiHasil(),
                     ),
               );
             },
@@ -199,7 +146,7 @@ class KonsultasiKeluhan extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  'Selanjutnya',
+                  'Lihat Rekomendasi Obat',
                   style: whiteStyle.copyWith(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
