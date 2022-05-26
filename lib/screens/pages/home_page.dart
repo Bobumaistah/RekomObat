@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:money_moora/constants/thame.dart';
+import 'package:money_moora/screens/pages/konsultasi_page.dart';
 import 'package:money_moora/screens/pages/navigation_draw.dart';
 import 'package:money_moora/screens/widgets/card_fitur.dart';
 import 'package:money_moora/screens/widgets/top_dokter.dart';
@@ -80,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                 fontWeight: FontWeight.w700,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             )
           ],
@@ -98,7 +99,7 @@ class _HomePageState extends State<HomePage> {
               'Ayo Konsultasi \nPenyakit mu',
               style: boldStyle.copyWith(fontSize: 25),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             )
           ],
@@ -167,14 +168,28 @@ class _HomePageState extends State<HomePage> {
           margin: const EdgeInsets.only(top: 10, left: 20),
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: Row(
-            children: const [
-              Cardfeature(
-                imageUrl: 'assets/images/konsul.png',
-                text: 'Konsultasi',
-                cardColor: kwhiteColor,
-                textColor: kprimeColor,
+            children: [
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const KonsultasiPage(),
+                    ),
+                  );
+                },
+                borderRadius: BorderRadius.circular(15),
+                child: const Cardfeature(
+                  imageUrl: 'assets/images/konsul.png',
+                  text: 'Konsultasi',
+                  cardColor: kwhiteColor,
+                  textColor: kprimeColor,
+                ),
               ),
-              Cardfeature(
+              const SizedBox(
+                width: 15,
+              ),
+              const Cardfeature(
                 imageUrl: 'assets/images/insights-tracking.png',
                 text: 'Apotek Terdekat',
                 cardColor: kwhiteColor,
